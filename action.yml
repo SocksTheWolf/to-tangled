@@ -41,6 +41,7 @@ runs:
 
         # Configure SSH to use the key for tangled.org
         echo "Host ${{ inputs.knot }}
+          IdentitiesOnly yes
           IdentityFile ~/.ssh/tangled_key" >> ~/.ssh/config
 
         chmod 600 ~/.ssh/config
